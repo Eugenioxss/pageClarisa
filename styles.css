@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('C:/Users/admin/Desktop/pageClarisa/corazón.jpg'); /* Ruta a la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease;
+  }
+  
+  #timer {
+    font-size: 55px;
+    margin-top: 20px;
+    color: #ffffff;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    animation: fadeIn 3s ease;
+  }
+  
+  p {
+    font-size: 68px;
+    margin-top: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+  }
+  
+  @media screen and (max-width: 768px) {
+    /* Estilos para pantallas más pequeñas, como teléfonos */
+    #timer {
+      font-size: 35px; /* Tamaño de fuente reducido */
+      -webkit-text-stroke-width: 1px; /* Grosor del borde reducido */
+    }
+  
+    p {
+      font-size: 45px; /* Tamaño de fuente reducido */
+      -webkit-text-stroke-width: 2px; /* Grosor del borde reducido */
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0; /* Comienza con opacidad 0 */
+    }
+    to {
+      opacity: 1; /* Termina con opacidad 1 */
+    }
+  }
+  
