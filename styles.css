@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: url('https://github.com/Eugenioxss/pageClarisa/blob/main/coraz%C3%B3n.jpg'); /* Ruta a la imagen de fondo */
+    background-image: url('https://raw.githubusercontent.com/Eugenioxss/pageClarisa/main/coraz%C3%B3n.jpg'); /* Ruta a la imagen de fondo */
     background-size: cover;
     background-position: center;
   }
