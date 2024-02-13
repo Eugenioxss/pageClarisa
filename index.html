@@ -14,12 +14,33 @@
       <p>de novios</p>
     </div>
   </main>
-  <script src="script.js"></script>
 
-  <!-- Añade la siguiente etiqueta de script para cargar jQuery desde Google CDN -->
+  <!-- Coloca tus scripts al final del body para una mejor carga -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
 
-  <!-- Añade la siguiente etiqueta de script para cargar el script que contiene los estilos específicos para dispositivos móviles -->
-  <script src="mobile-styles.js"></script>
+      const startDate = new Date('2024-01-23T18:00:00'); //date
+    
+      function updateTimer() {
+        const currentDate = new Date();
+        const timeDifference = currentDate - startDate;
+    
+        const years = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 365));
+        const months = Math.floor((timeDifference % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30));
+        const days = Math.floor((timeDifference % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+    
+        const timerElement = document.getElementById('timer');
+        timerElement.innerHTML = `${years} años, ${months} meses, ${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
+      }
+    
+      // Actualiza el contador cada segundo
+      setInterval(updateTimer, 1000);
+    });
+  </script>
 </body>
 </html>
